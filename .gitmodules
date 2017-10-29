@@ -1,0 +1,3 @@
+[submodule "test/arise-js"]
+	path = test/arise-js
+	url = https://github.com/arisebank/arise-js.git
