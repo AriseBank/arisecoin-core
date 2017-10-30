@@ -15,7 +15,7 @@ function postTransaction (transaction, done) {
 	});
 }
 
-function sendArk (params, done) {
+function sendAco (params, done) {
 	var transaction = node.aco.transaction.createTransaction(params.recipientId, params.amount, null, params.secret);
 
 	postTransaction(transaction, function (err, res) {
@@ -67,7 +67,7 @@ describe('POST /peer/transactions', function () {
 		describe('when account has funds', function () {
 
 			before(function (done) {
-				sendArk({
+				sendAco({
 					secret: node.gAccount.password,
 					amount: node.fees.secondPasswordFee + 100000000,
 					recipientId: account.address

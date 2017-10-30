@@ -19,23 +19,23 @@ var multiSigTx = {
 	txId: ''
 };
 
-function sendArk (account, i, done) {
-	var randomArk = node.randomArk();
+function sendAco (account, i, done) {
+	var randomAco = node.randomAco();
 
 	node.put('/api/transactions/', {
 		secret: node.gAccount.password,
-		amount: randomArk,
+		amount: randomAco,
 		recipientId: account.address
 	}, function (err, res) {
 		node.expect(res.body).to.have.property('success').to.be.ok;
 		if (res.body.success && i != null) {
-			accounts[i].balance = randomArk / node.normalizer;
+			accounts[i].balance = randomAco / node.normalizer;
 		}
 		done();
 	});
 }
 
-function sendArkFromMultisigAccount (amount, recipient, done) {
+function sendAcoFromMultisigAccount (amount, recipient, done) {
 	node.put('/api/transactions/', {
 		secret: multisigAccount.password,
 		amount: amount,
@@ -88,7 +88,7 @@ function makeKeysGroup () {
 before(function (done) {
 	var i = 0;
 	async.eachSeries(accounts, function (account, eachCb) {
-		sendArk(account, i, function () {
+		sendAco(account, i, function () {
 			i++;
 			return eachCb();
 		});
@@ -98,7 +98,7 @@ before(function (done) {
 });
 
 before(function (done) {
-	sendArk(multisigAccount, null, done);
+	sendAco(multisigAccount, null, done);
 });
 
 before(function (done) {
@@ -365,7 +365,7 @@ describe('GET /api/multisignatures/pending', function () {
 describe('PUT /api/api/transactions/', function () {
 
 	it('when group transaction is pending should be ok', function (done) {
-		sendArkFromMultisigAccount(100000000, node.gAccount.address, function (err, transactionId) {
+		sendAcoFromMultisigAccount(100000000, node.gAccount.address, function (err, transactionId) {
 			node.onNewBlock(function (err) {
 				node.get('/api/transactions/get?id=' + transactionId, function (err, res) {
 					node.expect(res.body).to.have.property('success').to.be.ok;
@@ -453,7 +453,7 @@ describe('POST /api/multisignatures/sign (group)', function () {
 describe('POST /api/multisignatures/sign (transaction)', function () {
 
 	before(function (done) {
-		sendArkFromMultisigAccount(100000000, node.gAccount.address, function (err, transactionId) {
+		sendAcoFromMultisigAccount(100000000, node.gAccount.address, function (err, transactionId) {
 			multiSigTx.txId = transactionId;
 			done();
 		});

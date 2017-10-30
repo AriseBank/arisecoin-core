@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
     # Creating DB and user
     sudo -u postgres psql -c "CREATE USER $USER WITH PASSWORD 'password';"
     #sudo -u postgres createuser --createdb --password $USER
-    sudo -u postgres createdb -O $USER ark_testnet
+    sudo -u postgres createdb -O $USER arisecointestnet
     sudo service postgresql start
 
     git clone https://github.com/arisebank/arise-core.git
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
-    v.name = "ark_node_vm"
+    v.name = "arisecoinnode_vm"
   end
 
   # Disable automatic box update checking. If you disable this, then

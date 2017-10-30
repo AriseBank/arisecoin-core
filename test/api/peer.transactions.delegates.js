@@ -14,7 +14,7 @@ function postTransaction (transaction, done) {
 	});
 }
 
-function sendArk (params, done) {
+function sendAco (params, done) {
 	var transaction = node.aco.transaction.createTransaction(params.recipientId, params.amount, null, params.secret);
 
 	postTransaction(transaction, function (err, res) {
@@ -67,7 +67,7 @@ describe('POST /peer/transactions', function () {
 		describe('when account has funds', function () {
 
 			before(function (done) {
-				sendArk({
+				sendAco({
 					secret: node.gAccount.password,
 					amount: node.fees.delegateRegistrationFee,
 					recipientId: account.address
@@ -121,7 +121,7 @@ describe('POST /peer/transactions', function () {
 		describe('twice within the same block', function () {
 
 			before(function (done) {
-				sendArk({
+				sendAco({
 					secret: node.gAccount.password,
 					amount: (node.fees.delegateRegistrationFee * 2),
 					recipientId: account2.address

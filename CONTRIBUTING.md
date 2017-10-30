@@ -1,9 +1,9 @@
 # BOUNTY Program
 ACO has a bounty program for all accepted PR (Pull Requests) for this repository
 
-More information can be found at https://blog.aco.io/200-000-aco-bounty-for-developers-in-the-1st-year-76aa44304012
+More information can be found at https://arisecoin.com/developers/bounty/
 
-Before pushing PR, please [jump in our slack #development](https://arisecoin.com/slack) channel in order to discuss your contributions or to connect with other ARKvelopers.
+Before pushing PR, please [jump in our slack #development](https://slack.arisecoin.com) channel in order to discuss your contributions or to connect with other Arise developers.
 
 # Guidelines
 - pickup any of the existing issues or if you find an issue make a PR,

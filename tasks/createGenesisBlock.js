@@ -49,7 +49,7 @@ var seed_peers = [
 ];
 
 // default db named
-var db_name = "ark_" + network_name;
+var db_name = "arisecoin" + network_name;
 
 // optional premined accounts. Example :
 // [

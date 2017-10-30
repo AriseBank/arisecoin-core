@@ -61,7 +61,7 @@ if (process.env.SILENT === 'true') {
 }
 
 // Random ACO amount
-node.Ark = Math.floor(Math.random() * (100000 * 100000000)) + 1;
+node.Aco = Math.floor(Math.random() * (100000 * 100000000)) + 1;
 
 // Returns a random delegate name
 node.randomDelegateName = function () {
@@ -88,7 +88,7 @@ node.randomProperty = function (obj, needKey) {
 };
 
 // Returns random ACO amount
-node.randomArk = function () {
+node.randomAco = function () {
 	return Math.floor(Math.random() * (100 * 100000000)) + (10 * 100000000);
 };
 
