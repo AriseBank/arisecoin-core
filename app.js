@@ -151,7 +151,7 @@ d.run(function () {
                                 ╙╩╬░░░░╬╬░░░░░╩╙\n\
                                     ╙╬░░░░╩╙\n\
 \n\n\
-	           W H E R E  P H Y S I C S  M E E T S  E C O N O M I C S !\n\
+	        W H E R E  P H Y S I C S  M E E T S  E C O N O M I C S !\n\
 \n\
 "));
 	async.auto({
