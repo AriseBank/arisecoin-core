@@ -10,10 +10,10 @@ var Crypto = require('../helpers/crypto.js');
 var networks = require('../networks.json');
 
 // network name that SHOULD already be preconfigured in ../networks.json
-var network_name = "bitcoin";
+var network_name = "mainnet";
 if(!networks[network_name]){
-  console.log("WARNING: no configuration found in networks.json for '"+network_name+"'. Defaulting to 'devnet'");
-  network_name = "devnet";
+  console.log("WARNING: no configuration found in networks.json for '"+network_name+"'. Defaulting to 'mainnet'");
+  network_name = "mainnet";
 }
 
 // directory to export passphrases of premine account and genesis delegates. Should exist
@@ -31,20 +31,158 @@ var config_version = '1.0.1';
 // ips of your nodes in your network
 var seed_peers = [
         {
-        ip: "127.0.0.1",
-        port: 4100
+        ip: "212.47.254.188",
+        port: 2014
       },{
-        ip: "127.0.0.2",
-        port: 4100
+        ip: "51.15.214.190",
+        port: 2014
+      },,{
+        ip: "212.47.237.136",
+        port: 2014
       },{
-        ip: "127.0.0.3",
-        port: 4100
+        ip: "212.47.227.102",
+        port: 2014
       },{
-        ip: "127.0.0.4",
-        port: 4100
+        ip: "212.47.229.87",
+        port: 2014
       },{
-        ip: "127.0.0.5",
-        port: 4100
+        ip: "163.172.190.247",
+        port: 2014
+      },{
+        ip: "163.172.166.14",
+        port: 2014
+      },{
+        ip: "163.172.161.116",
+        port: 2014
+      },{
+        ip: "163.172.158.39",
+        port: 2014
+      },{
+        ip: "163.172.151.58",
+        port: 2014
+      },{
+        ip: "51.15.133.95",
+        port: 2014
+      },{
+        ip: "51.15.129.34",
+        port: 2014
+      },{
+        ip: "51.15.63.40",
+        port: 2014
+      },{
+        ip: "51.15.62.60",
+        port: 2014
+      },{
+        ip: "51.15.57.58",
+        port: 2014
+      },{
+        ip: "51.15.54.66",
+        port: 2014
+      },{
+        ip: "51.15.51.107",
+        port: 2014
+      },{
+        ip: "51.15.49.61",
+        port: 2014
+      },{
+        ip: "51.15.46.202",
+        port: 2014
+      },{
+        ip: "163.172.147.49",
+        port: 2014
+      },{
+        ip: "51.15.217.211",
+        port: 2014
+      },{
+        ip: "51.15.206.187",
+        port: 2014
+      },{
+        ip: "51.15.195.132",
+        port: 2014
+      },{
+        ip: "212.47.250.254",
+        port: 2014
+      },{
+        ip: "51.15.194.87",
+        port: 2014
+      },{
+        ip: "51.15.206.203",
+        port: 2014
+      },{
+        ip: "51.15.221.171",
+        port: 2014
+      },{
+        ip: "51.15.83.130",
+        port: 2014
+      },{
+        ip: "51.15.86.239",
+        port: 2014
+      },{
+        ip: "51.15.79.28",
+        port: 2014
+      },{
+        ip: "51.15.93.112",
+        port: 2014
+      },{
+        ip: "51.15.82.243",
+        port: 2014
+      },{
+        ip: "51.15.55.118",
+        port: 2014
+      },{
+        ip: "51.15.92.201",
+        port: 2014
+      },{
+        ip: "51.15.83.159",
+        port: 2014
+      },{
+        ip: "51.15.92.69",
+        port: 2014
+      },{
+        ip: "51.15.70.95",
+        port: 2014
+      },{
+        ip: "51.15.198.95",
+        port: 2014
+      },{
+        ip: "51.15.202.245",
+        port: 2014
+      },{
+        ip: "51.15.223.218",
+        port: 2014
+      },{
+        ip: "163.172.138.105",
+        port: 2014
+      },{
+        ip: "51.15.199.234",
+        port: 2014
+      },{
+        ip: "51.15.213.20",
+        port: 2014
+      },{
+        ip: "163.172.149.80",
+        port: 2014
+      },{
+        ip: "163.172.187.220",
+        port: 2014
+      },{
+        ip: "51.15.197.208",
+        port: 2014
+      },{
+        ip: "51.15.210.199",
+        port: 2014
+      },{
+        ip: "51.15.204.130",
+        port: 2014
+      },{
+        ip: "51.15.214.7",
+        port: 2014
+      },{
+        ip: "51.15.200.24",
+        port: 2014
+      },{
+        ip: "51.15.207.36",
+        port: 2014
       }
 ];
 
@@ -66,7 +204,7 @@ else {
 }
 
 // Total of premined token in satoshi. The premined accounts will be substracted to this
-var totalpremine = 2100000000000000;
+var totalpremine = 1650000000000000; 
 
 
 // config file that will be tuned and exported
@@ -83,7 +221,7 @@ var config = {
         port: 5432,
         database: db_name,
         user: null,
-        password: "password",
+        password: "",
         poolSize: 20,
         poolIdleTimeout: 30000,
         reapIntervalMillis: 1000,
