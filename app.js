@@ -127,21 +127,12 @@ d.run(function () {
                                      ,╦╣╣╦,\n\
                                  ,╔φ╬░░░░░░╬δ╦\n\
                               ╔φ╬░░░░░╬╙╙╬░░░░░╬φ╕\n\
-<<<<<<< HEAD
                           ╓╦╬╬░░░░╬╩        ╚╬░░░░░╬╦,\n\
                       ,╦╣╬░░░░░╩                ╚╬░░░░░╬╦,\n\
                   ,╦╣╬░░░░░╩╙        ╓φ╬╬╦²        ╙╩╬░░░░╬╪╦\n\
                ╔φ╬░░░░░╩╙²       ,╦╣╬░░░░░░░╬╦,        ╙╩░░░░░╬φ╦\n\
                ╠░░░╬╩`       ,╦╣╬░░░░░╩---╩╬░░░░░╣╦,       ²╚╬░░░░\n\
                ╠░░░░     ,╔φ╬░░░░░╩╙        ╙╩░░░░░╬δ╦      ]░░░░\n\
-=======
-                          ╓╦╬╬░░░░╬╩        ╚╬░░░░░╬╦\n\
-                      ,╦╣╬░░░░░╩                ╚╬░░░░░╬╦\n\
-                  ,╦╣╬░░░░░╩╙        ╓φ╬╬╦²        ╙╩╬░░░░╬╪╦\n\
-               ╔φ╬░░░░░╩╙²        ╦╣╬░░░░░░░╬╦         ╙╩░░░░░╬φ╦\n\
-               ╠░░░╬╩`       ╦╣╬░░░░░╩   ╩╬░░░░░╣╦        ²╚╬░░░░\n\
-               ╠░░░░      ╔φ╬░░░░░╩╙        ╙╩░░░░░╬δ╦      ]░░░░\n\
->>>>>>> 55ba54bfbb854017f49be5ecf01c5030deafe747
                ╠░░░░    ║░░░░░╬╙`              `╙╬░░░░░░    ]░░░░\n\
                ╠░░░░    ║░░░░                      ║░░░░    ]░░░░\n\
                ╠░░░░    ║░░░░                      ║░░░░    ]░░░░\n\
@@ -153,7 +144,6 @@ d.run(function () {
                ╠░░░░    ╙╩░░░                      ║░░╩┘    ]░░░░\n\
                ╠░░░░        ╙                      ╙`       ╔░░░░\n\
                ╠░░░░╬δ╦                                 ,╦╣╬░░░░░\n\
-<<<<<<< HEAD
                  ╙╩░░░░░╬φ╦                         ,╔φ╬░░░░░╩╙²\n\
                     ²╙╬░░░░░╬φ╕                  ╔φ╬░░░░░╬╩`\n\
                         ╚╬░░░░░╬╦,          ,╦╬╬░░░░╬╩\n\
@@ -162,16 +152,6 @@ d.run(function () {
                                     ╙╬░░░░╩╙\n\
 \n\n\
 	           W H E R E  P H Y S I C S  M E E T S  E C O N O M I C S !\n\
-=======
-                 ╙╩░░░░░╬φ╦                          ╔φ╬░░░░░╩╙²\n\
-                    ²╙╬░░░░░╬φ╕                  ╔φ╬░░░░░╬╩`\n\
-                        ╚╬░░░░░╬╦,           ╦╬╬░░░░╬╩\n\
-                             ╚╬░░░░╬╬╦    ╦╣╬░░░░░╩\n\
-                                ╙╩╬░░░░╬╬░░░░░╩╙\n\
-                                    ╙╬░░░░╩╙\n\
-\n\n\
-	        W H E R E  P H Y S I C S  M E E T S  E C O N O M I C S !\n\
->>>>>>> 55ba54bfbb854017f49be5ecf01c5030deafe747
 \n\
 "));
 	async.auto({
@@ -380,20 +360,12 @@ d.run(function () {
 			});
 
 			scope.network.server.listen(scope.config.port, scope.config.address, function (err) {
-<<<<<<< HEAD
 				scope.logger.info('# Aco node server started on: ' + scope.config.address + ':' + scope.config.port);
-=======
-				scope.logger.info('# AriseCoin node server started on: ' + scope.config.address + ':' + scope.config.port);
->>>>>>> 55ba54bfbb854017f49be5ecf01c5030deafe747
 
 				if (!err) {
 					if (scope.config.ssl.enabled) {
 						scope.network.https.listen(scope.config.ssl.options.port, scope.config.ssl.options.address, function (err) {
-<<<<<<< HEAD
 							scope.logger.info('Aco https started: ' + scope.config.ssl.options.address + ':' + scope.config.ssl.options.port);
-=======
-							scope.logger.info('AriseCoin https started: ' + scope.config.ssl.options.address + ':' + scope.config.ssl.options.port);
->>>>>>> 55ba54bfbb854017f49be5ecf01c5030deafe747
 
 							cb(err, scope.network);
 						});
