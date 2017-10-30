@@ -123,7 +123,7 @@ d.on('error', function (err) {
 
 d.run(function () {
 	var modules = [];
-	console.log(colors.cyan("\n\
+	console.log(colors.red("\n\
                                      ,╦╣╣╦,\n\
                                  ,╔φ╬░░░░░░╬δ╦\n\
                               ╔φ╬░░░░░╬╙╙╬░░░░░╬φ╕\n\
