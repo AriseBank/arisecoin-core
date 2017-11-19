@@ -1,20 +1,34 @@
 # AriseCoin-Core
+You earn, while they gain.
+The world, makes money go round.
 
-AriseCoin is a next generation crypto-currency and decentralized application platform, written entirely in JavaScript. For more information please refer to our website: https://arisecoin.com.
+With the release of the world's first cryptocurrency bank, many new possibilities 
+become realities. AriseCoin is one of them. With the launch of today's ICO, we 
+not only launch the largest ICO ever, we release the first blockchain built on 
+wealth creation for everyone.
 
-The initial coin offering is up at https://ico.arisecoin.com
+### What Is AriseCoin?
+AriseCoin is a new digital currency that enables the global economic system the 
+world has been waiting for. This new economic system combines the best features 
+of capitalism and socialism, while removing their defects. It's capitalism without 
+the inequality, and socialism without the lack of opportunity. With AriseCoin™, 
+the rich can still get richer, and the poor are raised from poverty without taxing 
+anyone. Everyone benefits from a combination of their personal wealth and the 
+growth and circulation of the global economy. We call this new form of economic 
+system "circulism," because it's all about circulation.
 
-We are still in beta testing for the blockchain, so use at your own risk and contribute how you want. We love developers who love contributing to the AriseCoin project. All developers who contribute solutions to working issues are rewarded with AriseCoin.
+### Why AriseCoin?
+AriseCoin works directly with the AriseBank platform. In fact, they both work 
+in concert with one another. AriseCoin is minted daily, based on the total daily
+gains from all AriseBank bank accounts. Those minted AriseCoins are then automatically 
+distributed to AriseCoin wallet holders around the world, creating truly organic 
+circulation, while also creating wealth distribution to everyone who's a part of 
+the AriseCoin community.
+
 
 ## Install, Upgrade etc...
 You need to provision a linux (ubuntu tested) server (digital ocean, vultur or other).
 
-Then use the excellent EasyCoin script
-```
-cd
-wget https://arisecoin.com/easycoin.sh
-bash easycoin.sh
-```
 
 For developers, please read below in section "Developer Installation"
 
@@ -44,19 +58,19 @@ Performance data coming soon
 
 ## Developer Installation
 
-Install essentials:
+Install AriseCoin-Core Essentials
 
 ```
 sudo apt-get update
 sudo apt-get install -y curl build-essential python git
 ```
 
-Install PostgreSQL (min version: 9.5.2)
+Install PostgreSQL (9.5.2)
 
 ```
 sudo apt-get install -y postgresql postgresql-contrib
 sudo -u postgres createuser --createdb --password $USER
-createdb arisecoin_test
+createdb arisecoin_mainnet
 ```
 
 Install Node.js (tested with version 6.9.2, but any recent LTS release should do):
