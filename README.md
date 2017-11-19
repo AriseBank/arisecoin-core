@@ -1,4 +1,4 @@
-[logo]
+![alt text][logo]
 
 # AriseCoin-Core
 You earn, while they gain.
