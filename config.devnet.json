@@ -1,0 +1,97 @@
+{
+  "port": 2010,
+  "address": "0.0.0.0",
+  "version": "1.0.1",
+  "fileLogLevel": "info",
+  "logFileName": "logs/aco.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "arisecoin_dev",
+    "user": null,
+    "password": "",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
+    },
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+    "list": [
+      {
+        "ip": "51.15.48.246",
+        "port": 2010
+      },
+      {
+        "ip": "51.15.62.19",
+        "port": 2010
+      },
+      {
+        "ip": "51.15.94.247",
+        "port": 2010
+      },
+      {
+        "ip": "51.15.86.108",
+        "port": 2010
+      },
+      {
+        "ip": "51.15.64.62",
+        "port": 2010
+      }
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+    "force": true,
+    "secret": [],
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": true,
+    "options": {
+      "port": 443,
+      "address": "0.0.0.0",
+      "key": "/etc/letsencrypt/live/node.arisecoin.com/privkey.pem",
+      "cert": "/etc/letsencrypt/live/node.arisecoin.com/fullchain.pem"
+    }
+  },
+  "network": "devnet",
+  "nethash": "d7081980ea80a96b0fb455bf2ba623f4ce2d0e7eb96c38e93847168b0fb05c42"
+}
