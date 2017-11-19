@@ -58,11 +58,11 @@ Performance data coming soon
 
 ## Developer Installation
 
-Install AriseCoin-Core Essentials
+Install AriseCoin-Core Dependencies 
 
 ```
 sudo apt-get update
-sudo apt-get install -y curl build-essential python git
+sudo apt-get install -y curl build-essential python git postgresql postgresql-contrib libpq-dev postgresql-server-dev-9.5
 ```
 
 Install PostgreSQL (9.5.2)
