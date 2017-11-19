@@ -75,12 +75,13 @@ sudo npm install grunt-cli -g
 
 Clone this repository
 ```
-git clone https://github.com/arisebank/arisecoin-node.git
-cd arisecoin-node
+git clone http://labs.arisebank.com/aco/arisecoin-core.git
+cd arisecoin-core
 ```
 
 Install node modules:
 ```
+apt-get install libpq-dev postgresql-server-dev-9.5
 npm install libpq secp256k1
 npm install
 ```
