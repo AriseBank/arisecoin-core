@@ -1,4 +1,4 @@
-![alt text](https://preview.ibb.co/jrMd06/arisecoin_wallet.png "AriseCoin header")
+![alt text](https://preview.ibb.co/kwc7tR/arisecoin_core.png "AriseCoin header")
 
 # AriseCoin-Core
 You earn, while they gain.
