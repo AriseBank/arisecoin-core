@@ -63,39 +63,19 @@ Install AriseCoin-Core Dependencies
 ```
 sudo apt-get update
 sudo apt-get install -y curl build-essential python git postgresql postgresql-contrib libpq-dev postgresql-server-dev-9.5
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+nvm install 6.9.2
+nvm use 6.9.2
 ```
 
-Install PostgreSQL (9.5.2)
+Install AriseCoin:
 
 ```
-sudo apt-get install -y postgresql postgresql-contrib
 sudo -u postgres createuser --createdb --password $USER
 createdb arisecoin_mainnet
-```
-
-Install Node.js (tested with version 6.9.2, but any recent LTS release should do):
-
-```
-sudo apt-get install -y nodejs
-sudo npm install -g n
-sudo n 6.9.2
-```
-
-Install grunt-cli (globally):
-
-```
-sudo npm install grunt-cli -g
-```
-
-Clone this repository
-```
 git clone http://labs.arisebank.com/aco/arisecoin-core.git
 cd arisecoin-core
-```
-
-Install node modules:
-```
-apt-get install libpq-dev postgresql-server-dev-9.5
+sudo npm install grunt-cli forever -g
 npm install libpq secp256k1
 npm install
 ```
@@ -113,10 +93,10 @@ createdb arisecoin_devnet
 node run start:devnet
 ```
 
-To launch AriseCoin on mainnet:
+To launch AriseCoin on mainnet (Forever):
 ```
 createdb arisecoin_mainnet
-node run start:mainnet
+forever node start app.js
 ```
 
 **NOTE:** The **port**, **address**, **genesis block** and **config-path** can be overridden by providing the relevant command switch:
